@@ -462,22 +462,41 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 border-t border-white/5">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex items-center gap-3">
-                <img src="logo.png" alt="Backend Bros Logo" class="h-8 w-auto">
-                <span class="text-xl font-bold tracking-tight">Backend Bros</span>
+    <footer class="bg-gray-900 text-white py-16 border-t border-white/5">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-12">
+                <div class="flex items-center gap-3">
+                    <img src="logo.png" alt="Backend Bros Logo" class="h-10 w-auto">
+                    <span class="text-2xl font-bold tracking-tight">Backend Bros</span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-6 items-center">
+                    <div class="flex items-center gap-4 bg-white/5 px-6 py-4 rounded-2xl border border-white/10 hover:border-primary transition-all group">
+                        <i class="fas fa-envelope text-primary text-2xl"></i>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] text-gray-500 uppercase font-black tracking-widest">Пишите нам</span>
+                            <a href="mailto:Spasskiy.iv@yandex.ru" class="font-bold hover:text-primary transition-colors">Spasskiy.iv@yandex.ru</a>
+                        </div>
+                    </div>
+
+                    <a href="https://t.me/Spasskiy_iv" class="flex items-center gap-4 bg-primary px-6 py-4 rounded-2xl hover:bg-blue-600 transition-all transform hover:-translate-y-1 shadow-xl shadow-blue-500/20 group">
+                        <i class="fab fa-telegram text-white text-3xl animate-pulse group-hover:animate-none"></i>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] text-blue-100 uppercase font-black tracking-widest">На связи 24/7</span>
+                            <span class="font-bold text-white">@Spasskiy_iv</span>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="text-gray-500 text-sm text-center">
-                &copy; 2016 - 2024 Backend Bros. Все права защищены.
-            </div>
-            <div class="flex gap-6">
-                <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                    <i class="fab fa-vk"></i>
-                </a>
-                <a href="https://t.me/Spasskiy_iv" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                    <i class="fab fa-telegram-plane"></i>
-                </a>
+
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 gap-6">
+                <div class="text-gray-500 text-sm">
+                    &copy; 2016 - 2024 Backend Bros. Все права защищены.
+                </div>
+                <div class="flex gap-6 items-center">
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors"><i class="fab fa-vk text-2xl"></i></a>
+                    <a href="https://t.me/Spasskiy_iv" class="text-gray-500 hover:text-white transition-colors"><i class="fab fa-telegram-plane text-2xl"></i></a>
+                </div>
             </div>
         </div>
     </footer>
