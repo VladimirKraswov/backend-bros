@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Bros | IT-Аутстаффинг лучших специалистов</title>
+    <meta name="description" content="Закройте любые IT-вакансии с помощью лучших специалистов от Backend Bros. Быстрый подбор и качественная интеграция.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1e293b',
+                        accent: '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('hidden');
+                document.body.classList.toggle('overflow-hidden');
+            };
+
+            if (mobileMenuButton) mobileMenuButton.addEventListener('click', toggleMenu);
+            if (closeMenuButton) closeMenuButton.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+        });
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <i class="fas fa-code text-white text-xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-secondary">Backend Bros</span>
+            </div>
+            <nav class="hidden md:flex gap-8 items-center text-sm font-medium">
+                <a href="#about" class="hover:text-primary transition-colors">О компании</a>
+                <a href="#process" class="hover:text-primary transition-colors">Процесс</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+                <a href="#contact" class="px-5 py-2 bg-primary text-white rounded-full hover:bg-blue-600 transition-all shadow-sm">Связаться с нами</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-2xl text-secondary">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-8 text-xl font-bold text-secondary">
+            <button id="close-menu-button" class="absolute top-6 right-6 text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="#about" class="hover:text-primary transition-colors">О компании</a>
+            <a href="#process" class="hover:text-primary transition-colors">Процесс</a>
+            <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+            <a href="#contact" class="px-8 py-3 bg-primary text-white rounded-full hover:bg-blue-600 transition-all shadow-sm">Связаться с нами</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20 md:pt-48 md:pb-32 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-secondary leading-tight mb-6">
+                        Закройте любые <span class="text-primary">IT-вакансии</span> с помощью лучших специалистов
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                        Подбираем квалифицированных разработчиков, готовых присоединиться к вашему проекту. Без лишних затрат и временных потерь. Получите профессионалов, которые сразу приступят к делу.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://t.me/" class="px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-blue-600 transition-all transform hover:-translate-y-1 shadow-lg shadow-blue-200 flex items-center gap-2">
+                            <i class="fab fa-telegram"></i> Подобрать специалиста
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="bg-white p-6 rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 transform hover:scale-105 transition-transform">
+                                <div class="text-3xl font-bold text-primary mb-1">12 часов</div>
+                                <div class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Время подбора</div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 transform translate-x-4 hover:scale-105 transition-transform">
+                                <div class="text-3xl font-bold text-accent mb-1">50+</div>
+                                <div class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Специалистов</div>
+                            </div>
+                        </div>
+                        <div class="pt-8">
+                            <div class="bg-white p-6 rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 transform hover:scale-105 transition-transform">
+                                <div class="text-3xl font-bold text-secondary mb-1">100+</div>
+                                <div class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Проектов</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm">О компании</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary mt-4 mb-6">Почему аутстаффинг с Backend Bros?</h2>
+                    <p class="text-gray-600 text-lg">
+                        Мы предоставляем профессионалов, которые станут частью вашей команды на время проекта или на долгосрочной основе. Наши специалисты обладают глубокими знаниями в современных стеках технологий.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Advantage 1 -->
+                    <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-xl transition-all group">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                            <i class="fas fa-headset text-primary group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Постоянная поддержка</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Наша команда всегда на связи, чтобы оперативно решить любые вопросы и помочь с интеграцией наших специалистов в ваши процессы.
+                        </p>
+                    </div>
+                    <!-- Advantage 2 -->
+                    <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-xl transition-all group">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                            <i class="fas fa-search-code text-primary group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Код ревью от экспертов</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Наши специалисты работают под постоянным контролем опытных техлидов, которые проверяют качество кода.
+                        </p>
+                    </div>
+                    <!-- Advantage 3 -->
+                    <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-xl transition-all group">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                            <i class="fas fa-graduation-cap text-primary group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Развитие сотрудников</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Мы обеспечиваем доступ к обучающим материалам и экзаменам, чтобы наши специалисты всегда были на пике возможностей.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="py-20 bg-secondary text-white overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-16 items-center">
+                    <div class="md:w-1/3">
+                        <span class="text-primary font-bold uppercase tracking-widest text-sm">Процесс</span>
+                        <h2 class="text-4xl font-bold mt-4 mb-6 leading-tight text-white">Как проходит сотрудничество?</h2>
+                        <p class="text-gray-400">Мы обеспечиваем полное сопровождение наших специалистов на всех этапах сотрудничества.</p>
+                    </div>
+                    <div class="md:w-2/3 grid sm:grid-cols-2 gap-8 relative">
+                        <div class="space-y-8">
+                            <div class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-xl font-bold mb-4">1</div>
+                                <h4 class="text-xl font-bold mb-2">Анализ потребностей</h4>
+                                <p class="text-gray-400 text-sm">Изучаем требования и подбираем специалистов под задачи вашего проекта.</p>
+                            </div>
+                            <div class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-xl font-bold mb-4">3</div>
+                                <h4 class="text-xl font-bold mb-2">Интеграция</h4>
+                                <p class="text-gray-400 text-sm">Быстрая адаптация к вашим процессам. Приносим пользу с первых дней.</p>
+                            </div>
+                        </div>
+                        <div class="space-y-8 mt-12">
+                            <div class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-xl font-bold mb-4">2</div>
+                                <h4 class="text-xl font-bold mb-2">Подбор и интервью</h4>
+                                <p class="text-gray-400 text-sm">Организуем интервью для оценки навыков и подхода к работе.</p>
+                            </div>
+                            <div class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-xl font-bold mb-4">4</div>
+                                <h4 class="text-xl font-bold mb-2">Контроль качества</h4>
+                                <p class="text-gray-400 text-sm">Регулярные код-ревью и мониторинг результатов работы.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 text-center">
+                <span class="text-primary font-bold uppercase tracking-widest text-sm">О нас</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mt-4 mb-12">Наши специалисты работают здесь:</h2>
+                <div class="flex flex-wrap justify-center gap-x-12 gap-y-8 text-xl md:text-3xl font-bold text-gray-300 opacity-80">
+                    <span class="hover:text-secondary transition-colors">МТС</span>
+                    <span class="hover:text-secondary transition-colors">Ашан</span>
+                    <span class="hover:text-secondary transition-colors">Сбер</span>
+                    <span class="hover:text-secondary transition-colors">ВТБ</span>
+                    <span class="hover:text-secondary transition-colors">Газпром</span>
+                    <span class="hover:text-secondary transition-colors">Роснефть</span>
+                    <span class="hover:text-secondary transition-colors">Лукойл</span>
+                    <span class="hover:text-secondary transition-colors">Ростелеком</span>
+                    <span class="hover:text-secondary transition-colors">Пачка</span>
+                    <span class="hover:text-secondary transition-colors">НЛМК</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Feedback Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto bg-gray-900 rounded-[2rem] overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-12 text-white">
+                        <h2 class="text-3xl font-bold mb-6">Обратная связь</h2>
+                        <p class="text-gray-400 mb-8">
+                            Оставьте свои контактные данные и мы свяжемся с вами для консультации и ответим на все Ваши вопросы.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <span>Spasskiy.iv@yandex.ru</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-telegram-plane text-primary"></i>
+                                </div>
+                                <a href="https://t.me/" class="hover:text-primary transition-colors">Написать в Telegram</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-12 bg-white">
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Ваше имя</label>
+                                <input type="text" placeholder="Имя" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Телефон или Telegram</label>
+                                <input type="text" placeholder="+7 (___) ___ __ __" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors">
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-primary text-white rounded-xl font-bold hover:bg-blue-600 transition-all shadow-lg shadow-blue-200 mt-4">
+                                Отправить заявку
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <div class="text-center mb-16">
+                    <span class="text-primary font-bold uppercase tracking-widest text-sm">FAQ</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary mt-4">Часто задаваемые вопросы</h2>
+                </div>
+                <div class="space-y-4">
+                    <!-- Q1 -->
+                    <details class="bg-white p-6 rounded-2xl border border-gray-100 cursor-pointer shadow-sm group open:shadow-md transition-all">
+                        <summary class="list-none flex justify-between items-center font-bold text-secondary">
+                            Как проходит процесс подбора разработчиков?
+                            <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+                            Мы анализируем ваши требования и предлагаем вам кандидатов, соответствующих вашим ожиданиям. После этого вы можете провести собеседования и выбрать подходящих специалистов.
+                        </p>
+                    </details>
+                    <!-- Q2 -->
+                    <details class="bg-white p-6 rounded-2xl border border-gray-100 cursor-pointer shadow-sm group open:shadow-md transition-all">
+                        <summary class="list-none flex justify-between items-center font-bold text-secondary">
+                            Каковы сроки начала работы?
+                            <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+                            В среднем, процесс подбора и начала работы занимает от 1 до 2 недель, в зависимости от сложности требований и наличия нужных специалистов.
+                        </p>
+                    </details>
+                    <!-- Q3 -->
+                    <details class="bg-white p-6 rounded-2xl border border-gray-100 cursor-pointer shadow-sm group open:shadow-md transition-all">
+                        <summary class="list-none flex justify-between items-center font-bold text-secondary">
+                            Какие модели сотрудничества вы предлагаете?
+                            <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+                            Мы предлагаем гибкие модели сотрудничества: от полной интеграции команды в ваш проект до частичной занятости разработчиков по необходимости.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 border-t border-white/5">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+                    <i class="fas fa-code text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight">Backend Bros</span>
+            </div>
+            <div class="text-gray-500 text-sm text-center">
+                &copy; 2016 - 2024 Backend Bros. Все права защищены.
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                    <i class="fab fa-vk"></i>
+                </a>
+                <a href="https://t.me/" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
